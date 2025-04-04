@@ -4,7 +4,7 @@ import { describe, it } from 'node:test';
 
 
 import * as Hoek from '../lib/index.ts';
-import { MergeTypes } from '../lib/merge.ts';
+import { type MergeTypes } from '../lib/merge.ts';
 
 const expect = Code.expect;
 
