@@ -5,6 +5,7 @@
         "declaration": true,
         "declarationMap": true,
         "emitDeclarationOnly": false,
+        "erasableSyntaxOnly": true,
         "exactOptionalPropertyTypes": true,
         "forceConsistentCasingInFileNames": true,
         "inlineSources": true,
