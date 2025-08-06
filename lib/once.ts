@@ -1,4 +1,4 @@
-const wrapped = Symbol('wrapped');
+const wrapped: unique symbol = Symbol('wrapped');
 
 interface WrappedFunction {
     (...args: any[]): any;

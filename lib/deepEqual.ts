@@ -43,7 +43,7 @@ export interface DeepEqualOptions {
 }
 
 
-export const deepEqual = (obj: unknown, ref: unknown, options?: DeepEqualOptions) => {
+export const deepEqual = (obj: unknown, ref: unknown, options?: DeepEqualOptions): boolean => {
 
     options = Object.assign({ prototype: true }, options);
 

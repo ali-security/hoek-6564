@@ -7,17 +7,17 @@ export class Bench {
         this.reset();
     }
 
-    reset() {
+    reset(): void {
 
         this.ts = Bench.now();
     }
 
-    elapsed() {
+    elapsed(): number {
 
         return Bench.now() - this.ts;
     }
 
-    static now() {
+    static now(): number {
 
         const ts = process.hrtime();
         return (ts[0] * 1e3) + (ts[1] / 1e6);

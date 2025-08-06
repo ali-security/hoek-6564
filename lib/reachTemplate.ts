@@ -13,7 +13,7 @@ export const reachTemplate = (
     obj: object | null,
     template: string,
     options?: ReachOptions | string
-) => {
+): string => {
 
     return template.replace(/{([^{}]+)}/g, (_: string, chain: string) => {
 

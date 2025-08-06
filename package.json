@@ -3,8 +3,13 @@
   "description": "General purpose node utilities",
   "version": "11.0.6",
   "repository": "git://github.com/hapijs/hoek",
-  "main": "dist/index.js",
-  "types": "lib/index.ts",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "module": "./dist/index.js",
+  "exports": {
+    ".": "./dist/index.js",
+    "./package.json": "./package.json"
+  },
   "type": "module",
   "keywords": [
     "utilities"
@@ -20,13 +25,14 @@
     "@hapi/eslint-plugin": "^7.0.0",
     "@hapi/lab": "^26.0.0",
     "@types/node": "^22",
+    "tsdown": "^0.13.3",
     "typescript": "^5.8.2",
     "typescript-eslint": "^8.11.0"
   },
   "scripts": {
     "test": "node --experimental-strip-types --test --experimental-test-coverage --test-coverage-branches=100 --test-coverage-functions=100 --test-coverage-lines=100 --test-coverage-exclude=test/** test/**/*.ts",
     "lint": "tsc --noEmit && eslint . --ext .js,.ts",
-    "build": "tsc -p tsconfig.build.json --outDir dist"
+    "build": "tsdown"
   },
   "license": "BSD-3-Clause"
 }
