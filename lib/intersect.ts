@@ -1,5 +1,6 @@
 export type IntersectArray<T> = Array<T> | Set<T> | Record<number, T> | null
 
+type ExtractIntersectType<T> = T extends IntersectArray<infer U> ? U : never;
 
 export interface IntersectOptions {
 
@@ -24,7 +25,7 @@ export function intersect<
     array1: T1,
     array2: T2,
     options?: IntersectOptions
-): T1 | T2 | null;
+): Array<ExtractIntersectType<T1> | ExtractIntersectType<T2>> | null;
 
 export function intersect(
     array1: any,
